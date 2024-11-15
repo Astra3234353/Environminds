@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 0 !important;
+}
+
 .main {
   margin: 0;
 }
@@ -92,9 +96,14 @@
 
 /*  SEC PART 2 */
 
+.main__section-2 {
+  min-height: 30vh;
+  align-items: center;
+  padding: 40px 0 30px 0;
+}
+
 .section-2__intro-text {
   padding: 20px 15vw;
-  margin: 10vh 0;
 }
 
 .main-text-title {
@@ -102,6 +111,7 @@
 }
 
 .main-text-info {
+  font-weight: 400;
   text-align: center;
   text-wrap: pretty;
 }
@@ -114,7 +124,32 @@
 .main-text-info{
   font-size: clamp(1.2rem, 1.7vw, 2.3rem);
   padding-top: 20px;
-  color: rgb(24, 24, 24);
+  color: rgb(36, 36, 36);
+}
+
+.main--section-2-extra {
+  background-color: #047857d0;
+  align-items: center;
+  min-height: 40vh;
+  padding: 80px 0;
+}
+
+.section-2-extra__title {
+  color:#fff;
+  display: block;
+  text-align: center;
+  font-size: clamp(3.5rem, 4.5vw, 5rem);
+  padding-top: 30px;
+  font-weight: 500;
+}
+
+.section-2-extra__info {
+  color: #dddddd;
+  font-size: clamp(1.4rem, 1.7vw, 2rem);
+  padding: 20px;
+  margin: 0 5vw;
+  text-align: center;
+  text-wrap: pretty;
 }
 
 /*  SEC PART 3 (video / img) */
