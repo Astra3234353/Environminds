@@ -1,0 +1,322 @@
+.main {
+  margin: 0;
+}
+
+.main__section-1 {
+  background: url("../img/backgrounds/s4.webp");
+  background-size: cover;
+  background-position: center;
+  height: 92vh;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.main__section-1::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.411);
+  z-index: 100;
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+  .main__section-1 {
+    height: 75vh;
+    top: 50%;
+  }
+
+  .section-2__intro-text {
+    padding: 0 10vh;
+  }
+
+  .h1 {
+    top: 50%;
+  }
+
+  
+}
+
+.h1 {
+  color: white;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 35%;
+  font-size: 3.5vw;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
+  5px 5px 70px rgba(53, 53, 53, 0.932);
+  z-index: 200;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  --border-right: 6px;
+  --animation-color: rgb(8, 211, 153);
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+}
+
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 1.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  text-shadow: none;
+}
+
+.button:hover .hover-text {
+  width: 100%;
+}
+
+/*  SEC PART 2 */
+
+.section-2__intro-text {
+  padding: 20px 15vw;
+  margin: 10vh 0;
+}
+
+.main-text-title {
+  text-align: center;
+}
+
+.main-text-info {
+  text-align: center;
+  text-wrap: pretty;
+}
+
+.main-text-title{
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  color: rgb(4, 120, 87 );
+}
+
+.main-text-info{
+  font-size: clamp(1.2rem, 1.7vw, 2.3rem);
+  padding-top: 20px;
+  color: rgb(24, 24, 24);
+}
+
+/*  SEC PART 3 (video / img) */
+
+.main__section-3 {
+  box-sizing: border-box;
+  background: rgb(27, 110, 82);
+  background: linear-gradient(0deg, rgb(27, 110, 82) 0%, rgb(14, 176, 130) 55%, rgb(41, 121, 97) 100%);
+  padding: 0;
+  overflow: hidden;
+}
+
+.section-3__video {
+  background-color: rgb(29, 29, 29);
+  min-height: 500px;
+}
+
+.section-3__plants-img-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px 0;
+  margin: -3px;
+}
+
+@media (max-width: 750px) {
+  .section-3__plants-img-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    height: 200px !important;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  transition: all 0.3s;
+  background-size: cover;
+  background: url('../img/backgrounds/s4.jpg');
+}
+
+.card:first-child {
+  background: url('../img/backgrounds/s2.webp');
+  background-size: cover;
+}
+
+.card:last-child {
+  background: url('../img/backgrounds/s3.webp');
+  background-size: cover;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+}
+
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+
+.card__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card:hover svg {
+  scale: 0;
+}
+
+.card__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: black;
+  line-height: 1.4;
+}
+
+
+/*  SEC PART 4 (Grid) */
+
+.main__section-4 {
+  overflow: hidden;
+  min-height: 80vh;
+  align-content: center;
+}
+
+.section4__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 5px;
+  width: 125vw;
+}
+
+@media (max-width: 800px) {
+  .section4__grid {
+    grid-template-columns: repeat(2, fr);
+    width: 135vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .section4__grid {
+    grid-template-columns: repeat(2, fr);
+    width: 140vw;
+  }
+}
+
+.section4__grid .grid__elements {
+  font-size: clamp(1.0rem, 1.7vw, 2.2rem);
+  text-transform: capitalize;
+  vertical-align: middle;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  padding:  12px 0;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: rgb(4, 120, 87 );
+  animation: toggle__animation 12s infinite;
+}
+
+.section4__grid .grid__elements:hover {
+  background-color: rgb(7, 155, 113);
+  color: #fff;
+  box-shadow: 0 4px 12px -1px rgb(0 0 0 / .1), 0 2px 4px 4px rgb(0 0 0 / .1);
+  transform: scale(1.05);
+}
+
+@keyframes toggle__animation {
+  0%, 100% {
+    transform: translateX(-170px);
+  }
+
+  50% {
+    transform: translateX(0px);
+  }
+}
+
+.main__section-4 .section-2__intro-text {
+  padding: 0 10vw;
+}
+
+.section-4__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-wrap: balance;
+}
+
+
+.section-4__info .main-text-info {
+  color: rgb(50, 50, 50);
+  color: rgb(188, 188, 188);
+  border-radius: 16px;
+  padding: 30px 6vw;
+  transition: all 0.15s;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  margin: 10px 5vw;
+  margin-bottom: 40px;
+}
+
+.section-4__info .main-text-title {
+  display: inline-block;
+  color: #047857;
+  padding: 0 15vw;
+  border-radius: 8px;
+}
+
+
+.main__section-4 {
+  width: 100%;
+  height: 100%;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+  padding: 100px 0;
+  background-attachment: fixed;
+}

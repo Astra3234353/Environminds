@@ -1,0 +1,88 @@
+.nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  margin: 0;
+  height: 8vh;
+  min-height: 60px;
+  align-items: center;
+  overflow: hidden;
+  background-color: rgb(241, 241, 241);
+  box-shadow: 0 0 8px rgb(31, 31, 31);
+  z-index: 5000;
+  text-wrap: nowrap;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.nav__left-section {
+  width: 30px;
+}
+
+.nav__right-section {
+  flex: 1;
+  text-align: end;
+  margin-right: 20px;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+}
+
+.nav-item-calc a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item-calc {
+  display: inline;
+  background-color: rgb(4, 120, 87 );
+  font-weight: 500;
+  color: white;
+  border-radius: 20px;
+  padding: 8px 20px;
+  margin-left: 12px;
+  transition: all 0.2s;
+}
+
+.nav-item-calc:hover {
+  background-color: rgb(5, 142, 103);
+}
+
+.nav-item a {
+  color: rgb(25, 48, 29);
+  text-decoration: none;
+  padding: 4vh 15px;
+  transition: all 0.15s;
+}
+
+@media (max-width: 800px) {
+  .nav-item a {
+    padding: 4vh 10px;
+  } 
+
+}
+
+@media (max-width: 500px) {
+  .nav-item-inicio {
+    display: none;
+  }
+}
+
+.nav-item:hover a {
+  color: rgb(255, 255, 255);
+  background-color: rgb(14, 129, 97);
+}
