@@ -36,9 +36,13 @@ body {
 
   .h1 {
     top: 50%;
-  }
+  } 
+}
 
-  
+@media (max-height: 540px) {
+  .main__section-1 {
+    height: 88vh;
+  }
 }
 
 .h1 {
@@ -47,10 +51,11 @@ body {
   text-align: center;
   width: 100%;
   top: 35%;
-  font-size: 3.5vw;
+  font-size: clamp(1.2rem, 3vw, 4rem);
   text-shadow: 2px 2px 5px rgba(0,0,0,0.3),
   5px 5px 70px rgba(53, 53, 53, 0.932);
   z-index: 200;
+  overflow: hidden;
 }
 
 .button {
@@ -99,7 +104,7 @@ body {
 .main__section-2 {
   min-height: 30vh;
   align-items: center;
-  padding: 40px 0 30px 0;
+  padding: 10vh 0;
 }
 
 .section-2__intro-text {
@@ -123,29 +128,27 @@ body {
 
 .main-text-info{
   font-size: clamp(1.2rem, 1.7vw, 2.3rem);
-  padding-top: 20px;
   color: rgb(36, 36, 36);
 }
 
 .main--section-2-extra {
-  background-color: #047857d0;
+  background-color: #047857b9;
   align-items: center;
-  min-height: 40vh;
-  padding: 80px 0;
+  padding: 10vh 0;
 }
 
 .section-2-extra__title {
   color:#fff;
   display: block;
   text-align: center;
-  font-size: clamp(3.5rem, 4.5vw, 5rem);
+  font-size: clamp(3rem, 4.5vw, 5rem);
   padding-top: 30px;
   font-weight: 500;
 }
 
 .section-2-extra__info {
   color: #dddddd;
-  font-size: clamp(1.4rem, 1.7vw, 2rem);
+  font-size: clamp(1.2rem, 1.7vw, 2rem);
   padding: 20px;
   margin: 0 5vw;
   text-align: center;
@@ -194,9 +197,12 @@ body {
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  transition: all 0.3s;
+  transition: all 0.15s;
+  opacity: 0.8;
   background-size: cover;
   background: url('../img/backgrounds/s4.jpg');
+  background-position: center;
+  filter: blur(1px);
 }
 
 .card:first-child {
@@ -212,6 +218,7 @@ body {
 .card:hover {
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
   opacity: 1;
+  filter: blur(0px);
 }
 
 .card__content {
